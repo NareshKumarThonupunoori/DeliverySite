@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-color: #25d366;  /* WhatsApp green */
+    background-color: #9025d3;  /* WhatsApp green */
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #075e54;  /* Darker green on hover */
+    background-color: #020100;  /* Darker green on hover */
     border-radius: 5px;
 }
 
@@ -82,13 +82,13 @@ nav ul li a:hover {
 
 .service-item h3 {
     font-size: 1.8rem;
-    color: #00796b;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .service-item p {
     font-size: 1.1rem;
-    color: #555;
+    color: #ffffff;
 }
 
 .service-item:hover {
@@ -126,8 +126,8 @@ footer .contact-info {
 }
 
 footer .whatsapp-icon img {
-    width: 60px;
-    height: 60px;
+    width: 25px;
+    height: 25px;
     transition: transform 0.3s ease;
 }
 
@@ -150,3 +150,57 @@ footer .whatsapp-icon img:hover {
         height: 50px;
     }
 }
+
+/* Existing CSS */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: white;
+    height: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* To improve text readability */
+}
+
+.service-item h3, .service-item p {
+    margin: 0;
+}
+
+/* Adding unique background images for each service */
+.service-item:nth-child(1) {
+    background-image: url('groceries.jpg'); /* Groceries */
+}
+
+.service-item:nth-child(2) {
+    background-image: url('vegetables.jpg'); /* Vegetables */
+}
+
+.service-item:nth-child(3) {
+    background-image: url('food.jpg'); /* Food Delivery */
+}
+
+.service-item:nth-child(4) {
+    background-image: url('dairy.jpg'); /* Dairy Products */
+}
+
+.service-item:nth-child(5) {
+    background-image: url('package.jpg'); /* Cargo/Package Delivery */
+}
+
+/* On hover, give a slight zoom effect */
+.service-item:hover {
+    transform: scale(1.05);
+}
+
